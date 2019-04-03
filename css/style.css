@@ -683,7 +683,7 @@ sup {
     display: grid;
     grid-template-areas: "a b" "c d" "e f";   
     grid-template-columns: 1fr 1fr;
-    height: 1200px;
+  /*  height: 1200px;*/
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;  
     margin: 127px auto 0;              
@@ -691,32 +691,38 @@ sup {
 .grid-blog-1 {
     grid-area: a;
     background-image: url(../img/blog1.png);
-    background-size: 570px 400px;
+    background-size: auto;
     background-repeat: no-repeat;     
 }
 .grid-blog-2 {
+    width: auto;
+    height: 400px;
     grid-area: b; 
     padding: 0 120px 0 18px;   
 }
 .grid-blog-3 {
     grid-area: c;    
     padding :0 117px 0 3px;
+    width: auto;
+    height: 400px;
 }
 .grid-blog-4 {
     grid-area: d;
     background-image: url(../img/blog2.png);
-    background-size: 570px 400px;
+    background-size: auto;
     background-repeat: no-repeat; 
 }    
 .grid-blog-5 {
     grid-area: e;
     background-image: url(../img/blog3.png);
-    background-size: 570px 400px;
+    background-size: auto;
     background-repeat: no-repeat; 
 }
 .grid-blog-6 {
     grid-area: f;
     padding: 0 120px 0 18px;
+    width: auto;
+    height: 400px;
 }
 .grid-blog-2 h3, .grid-blog-3 h3, .grid-blog-6 h3 {
     font-size: 25px;
@@ -918,6 +924,7 @@ sup {
     margin: 26px auto;    
 }
 
+
 /*@media*/
 
 @media (max-width:1200px) {
@@ -1055,25 +1062,23 @@ sup {
         grid-gap: 5px;          
         height: 1150px;    
     }
-    .grid-item, grid-item-work {
+    .grid-item, .grid-item-work {
         background-size: contain;
     }
     .grid-blog {        
-        grid-template-areas: "a" "b" "c" "d" "e" "f";
-        grid-gap: 0;
+        grid-template-areas: "b" "c" "f";        
         grid-template-columns: 1fr;
-        height: 2500px;        
-        margin: 30px auto 0;
-        grid-gap: 3px;             
+        margin: 0;      
     }
-    .grid-blog-1, .grid-blog-4, .grid-blog-5 {
-        background-size: 570px 400px;
-        height: 400px;
-        margin: 30px;
+    .grid-blog-2, .grid-blog-3, .grid-blog-6 {
+        height: auto;
+        padding: 0;
     }    
+
     .grid-blog-2 h3, .grid-blog-3 h3, .grid-blog-6 h3 {
-        margin: 33px auto 42px;
+        margin: 41px auto;
     }    
+
     .flex-work>li {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
@@ -1109,10 +1114,9 @@ sup {
         grid-template-columns: 1fr;
         grid-gap: 5px;   
         height: 2500px;            
-    }    
-    .grid-item, grid-item-work {
+    }   
+    .grid-item, .grid-item-work {
        background-size: cover;
-       /* margin: 15px auto;*/
     }
     h1 {
         font-size: 42px;
